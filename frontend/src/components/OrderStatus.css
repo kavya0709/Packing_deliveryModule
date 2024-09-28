@@ -1,0 +1,74 @@
+.order-status-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.status-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  position: relative;
+}
+
+.status-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.status-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: gray; /* Default color */
+  border: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Place it above the line */
+}
+
+.status-circle.completed {
+  background-color: green; /* Completed color */
+  border-color: green;
+}
+
+.tick {
+  color: white; /* Color of the tick */
+  font-size: 18px;
+}
+
+.status-line {
+  position: absolute;
+  left: 2%; /* Center line at the left of the circle */
+  height: 40px; /* Height of the line */
+  width: 4px;
+  background-color: gray; /* Default line color */
+  transform: translateX(-50%);
+  top: -40px; /* Position it vertically between circles */
+  z-index: 0; /* Place it below the circle */
+}
+
+.status-line.completed {
+  background-color: green; /* Completed line color */
+}
+
+.status-info {
+  margin-left: 10px; /* Space between circle and text */
+  text-align: left;
+}
+
+.status-info h4 {
+  margin: 0;
+  font-size: 16px; /* Adjust font size */
+}
+
+.status-info p {
+  margin: 0;
+  font-size: 14px; /* Adjust font size */
+}
