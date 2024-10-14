@@ -45,11 +45,11 @@
 
 .status-line {
   position: absolute;
-  left: 2%; /* Center line at the left of the circle */
+  left: 15px; /* Adjust this to control horizontal distance from the circle */
   height: 40px; /* Height of the line */
   width: 4px;
   background-color: gray; /* Default line color */
-  transform: translateX(-50%);
+  transform: translateX(0); /* Adjust for equal spacing */
   top: -40px; /* Position it vertically between circles */
   z-index: 0; /* Place it below the circle */
 }
@@ -59,7 +59,7 @@
 }
 
 .status-info {
-  margin-left: 10px; /* Space between circle and text */
+  margin-left: 20px; /* Increased space between circle and text for better spacing */
   text-align: left;
 }
 
