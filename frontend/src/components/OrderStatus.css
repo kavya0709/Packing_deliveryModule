@@ -5,11 +5,12 @@
   padding: 20px;
 }
 
+
+
 .status-flow {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
-  position: relative;
 }
 
 .status-item {
@@ -71,4 +72,37 @@
 .status-info p {
   margin: 0;
   font-size: 14px; /* Adjust font size */
+}
+
+.product-image-container {
+  margin-left: 300px;
+  margin-top: -250px;
+}
+
+.product-container {
+  text-align: center;
+  margin-top: -300px;
+}
+
+.product-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-name {
+  margin-left: 300px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-description {
+  margin-left: 300px;
+  font-size: 17px;
+}
+
+.product-price {
+  font-size: 16px;
+  color: green;
+  margin-left: 300px;
 }

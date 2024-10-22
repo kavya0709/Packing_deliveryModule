@@ -44,6 +44,19 @@ const OrderStatus = ({ orderId }) => {
           </div>
         ))}
       </div>
+      {/* Add the product image next to the statuses */}
+      {orderStatus.productImage && (
+        <div className="product-container">
+          <div className="product-image-container">
+            <img src={orderStatus.productImage} alt="Product" className="product-image" />
+          </div>
+          <div className="product-details">
+            <h3 className="product-name">{orderStatus.productName}</h3>
+            <p className="product-description">{orderStatus.productDescription}</p>
+            <p className="product-price">{orderStatus.productPrice}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

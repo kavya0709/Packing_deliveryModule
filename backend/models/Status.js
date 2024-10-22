@@ -12,6 +12,10 @@ const orderStatusSchema = new mongoose.Schema({
     status: [stageSchema], // Changed to stages
     refundProcessed: Boolean,
     productType: String,
+    productImage: String,
+    productName: String,
+    productPrice: String,
+    productDescription: String
 });
 
 const OrderStatus = mongoose.model('OrderStatus', orderStatusSchema, 'orderStatuses');
