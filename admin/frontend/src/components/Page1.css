@@ -1,34 +1,46 @@
+/* Page1.css */
+
+.delivery-express {
+  background-color: red;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.delivery-normal {
+  background-color: green;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Optional: Style the table for a cleaner look */
 .table-container {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .order-table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-  }
-  
-  .order-table th, .order-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  .order-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-  
-  .order-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .order-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
+  padding: 20px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th, .order-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #f4f4f4;
+}
+
+.express-order {
+  color: red;
+  font-size: 1em;
+}
+
+.normal-order {
+  color: green;
+  font-size: 1.2em;
+}

@@ -1,30 +1,74 @@
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 90px; /* Space between images */
-    margin-top: 200px;
-  }
-  
-  .image-item {
-    text-align: center; /* Centers the text under each image */
-  }
-  
-  .image-item img {
-    width: 200px; /* Set a fixed width */
-    height: 200px; /* Set a fixed height to make all images the same size */
-    object-fit: cover; /* Ensures the image scales properly while maintaining aspect ratio */
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .image-item img:hover {
-    transform: scale(1.50); /* Slight zoom effect on hover */
-  }
-  
-  .image-item p {
-    margin-top: 10px; /* Adds some space between the image and the text */
-    font-size: 16px;
-    color: #333; /* Customize text color */
-  }
-  
+/* Centering the content and applying overall layout styles */
+/* Ensure the container fills the entire screen */
+.home-container {
+  text-align: left;
+  padding: 20px;
+  background-color: #ffffff;
+  height: 100vh; /* Fills the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  margin: 0;
+}
+
+/* Remove body margins to prevent scrolling */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body takes up the full screen */
+}
+
+
+/* Styling the header title */
+.header-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  position: absolute; /* Positions the title within the container */
+  top: 30px; /* Adjust this value as needed for vertical spacing */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Larger shadowed box around the images */
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px; /* Space between images */
+  margin-top: 200px; /* Margin for top spacing */
+  padding: 80px; /* Increased padding for larger box */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow effect */
+  border-radius: 12px; /* Adds more rounded corners */
+  background-color: #ffffff; /* Background color for the box */
+  max-width: 1200px; /* Increased box width */
+  margin: 0 auto; /* Centers the box */
+}
+
+/* Styling each image item */
+.image-item {
+  text-align: center; /* Centers the text under each image */
+}
+
+/* Styling and hover effect for the images */
+.image-item img {
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height to make all images the same size */
+  object-fit: cover; /* Ensures the image scales properly while maintaining aspect ratio */
+  border-radius: 8px; /* Adds rounded corners to the image */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect to scale the images */
+.image-item img:hover {
+  transform: scale(1.5); /* Slight zoom effect on hover */
+}
+
+/* Styling the text below the images */
+.image-item p {
+  margin-top: 10px; /* Adds some space between the image and the text */
+  font-size: 16px;
+  color: #333; /* Customize text color */
+}
