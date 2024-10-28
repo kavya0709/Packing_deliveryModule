@@ -1,13 +1,24 @@
-import OrderStatus from './components/OrderStatus';
+import React, { useState } from 'react';
+import WelcomePage from './components/WelcomePages/WelcomePage';
+import OrderStatus from './components/OrderStatus/OrderStatus';
+import './App.css';
 
-function App() {
-  const orderId = '12345';  // Example orderId
+const App = () => {
+  const [validatedOrderId, setValidatedOrderId] = useState(null);
+
+  const handleOrderSubmit = (orderId) => {
+    setValidatedOrderId(orderId);
+  };
 
   return (
     <div className="App">
-      <OrderStatus orderId={orderId} />  {/* Pass orderId as prop */}
+      {!validatedOrderId ? (
+        <WelcomePage onSubmit={handleOrderSubmit} />
+      ) : (
+        <OrderStatus orderId={validatedOrderId} />
+      )}
     </div>
   );
-}
+};
 
 export default App;

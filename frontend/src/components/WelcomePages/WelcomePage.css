@@ -1,0 +1,78 @@
+/* Container styling */
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  /* Animation for the welcome message */
+  .welcome-message {
+    font-size: 2.5rem;
+    color: #0048b6;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slide-down 1s ease-in forwards;
+  }
+  
+  /* Keyframes for sliding the welcome message */
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Input form fades in after the welcome message */
+  .fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+  }
+  
+  /* Keyframes for fading in the input box */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Styling for the input box and button */
+  .order-input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 250px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0048b6;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #003a8c;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  

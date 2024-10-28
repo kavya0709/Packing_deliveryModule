@@ -10,7 +10,7 @@ const stageSchema = new mongoose.Schema({
 const orderStatusSchema = new mongoose.Schema({
     orderId: String,
     status: [stageSchema], // Changed to stages
-    refundProcessed: Boolean,
+    refundProcessed: { type: Boolean, default: false }, 
     productType: String,
     productImage: String,
     productName: String,

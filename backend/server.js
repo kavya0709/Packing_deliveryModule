@@ -3,6 +3,7 @@ require('dotenv').config(); // Load environment variables from .env
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+//const refundRoutes = require('./routes/refundRoutes'); // Adjust the path based on your folder structure
 const statusRoutes = require('./routes/statusRoutes');
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/status', statusRoutes);
+//app.use('/api', refundRoutes); // Refund route
 
 // Debugging: Check if MONGO_URI is loaded
 console.log('MONGO_URI:', process.env.MONGO_URI);

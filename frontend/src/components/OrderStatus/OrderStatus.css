@@ -1,0 +1,188 @@
+/* Main wrapper for the order status */
+.order-status-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 80vh; /* Set height for vertical centering */
+}
+
+/* Left column for status chart */
+.status-column {
+  flex: 3;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  overflow-y: auto; /* Allow scrolling inside the column if needed */
+  max-height: 100vh; /* Limit height to the viewport */
+}
+
+/* Right column for product details */
+.product-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the return button */
+.return-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px; /* Adjusted margin */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make button full width */
+}
+
+.return-button:hover {
+  background-color: darkred;
+}
+
+/* Flex container for the status stages */
+.status-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Styling for each status item */
+.status-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Styling for the connecting lines between status circles */
+.status-line {
+  position: absolute;
+  left: 16px;
+  width: 4px;
+  height: 40px;
+  background-color: gray;
+  top: -40px;
+  z-index: 0;
+}
+
+.status-line.completed {
+  background-color: green;
+}
+
+/* Styling for the status circles */
+.status-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: gray;
+  border: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.status-circle.completed {
+  background-color: green;
+  border-color: green;
+}
+
+/* The check mark inside the completed circles */
+.tick {
+  color: white;
+  font-size: 18px;
+}
+
+/* Text info for each status stage */
+.status-info {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.status-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.status-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Product section styling */
+.product-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Styling for the product image */
+.product-image-container {
+  margin-bottom: 15px;
+}
+
+.product-image {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Product details */
+.product-details {
+  text-align: center;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.product-price {
+  font-size: 18px;
+  color: green;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1024px) {
+  .order-status-wrapper {
+    flex-direction: column;
+  }
+
+  .status-column,
+  .product-column {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-image {
+    width: 200px;
+  }
+}
